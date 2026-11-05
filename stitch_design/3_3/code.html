@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>지원금 챙김이 - 온보딩 진단 리포트</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error": "#ffffff",
+            "primary-container": "#2563eb",
+            "on-primary-fixed-variant": "#003ea8",
+            "on-secondary-container": "#5c647a",
+            "surface-tint": "#0053db",
+            "on-surface-variant": "#434655",
+            "on-primary-container": "#eeefff",
+            "secondary-fixed": "#dae2fd",
+            "surface-variant": "#d3e4fe",
+            "on-error-container": "#93000a",
+            "secondary": "#565e74",
+            "on-secondary-fixed-variant": "#3f465c",
+            "error": "#ba1a1a",
+            "secondary-fixed-dim": "#bec6e0",
+            "surface-container-highest": "#d3e4fe",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#c3c6d7",
+            "on-tertiary-fixed-variant": "#93000b",
+            "on-tertiary-container": "#ffecea",
+            "surface-container-high": "#dce9ff",
+            "on-surface": "#0b1c30",
+            "on-primary-fixed": "#00174b",
+            "error-container": "#ffdad6",
+            "surface-dim": "#cbdbf5",
+            "tertiary": "#ae0010",
+            "on-background": "#0b1c30",
+            "primary-fixed": "#dbe1ff",
+            "on-tertiary": "#ffffff",
+            "surface": "#f8f9ff",
+            "secondary-container": "#dae2fd",
+            "on-secondary-fixed": "#131b2e",
+            "tertiary-fixed-dim": "#ffb4ab",
+            "outline": "#737686",
+            "surface-container-low": "#eff4ff",
+            "tertiary-fixed": "#ffdad6",
+            "on-tertiary-fixed": "#410002",
+            "inverse-on-surface": "#eaf1ff",
+            "inverse-surface": "#213145",
+            "surface-container": "#e5eeff",
+            "background": "#f8f9ff",
+            "surface-bright": "#f8f9ff",
+            "on-secondary": "#ffffff",
+            "tertiary-container": "#d52022",
+            "on-primary": "#ffffff",
+            "primary": "#004ac6",
+            "primary-fixed-dim": "#b4c5ff",
+            "inverse-primary": "#b4c5ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-desktop": "1.5rem",
+            "space-xl": "2rem",
+            "gutter": "1rem",
+            "space-md": "1rem",
+            "margin": "1rem",
+            "margin-desktop": "2.5rem",
+            "space-xs": "0.25rem",
+            "margin-tablet": "1.5rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "headline-sm": ["Inter", "sans-serif"],
+            "headline-md": ["Inter", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "metric-num": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "display-lg-mobile": ["Inter", "sans-serif"],
+            "headline-lg": ["Inter", "sans-serif"],
+            "display-lg": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "metric-num": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+</head>
+<body class="bg-[#F8FAFC] text-[#0F172A] font-body-md antialiased min-h-screen relative overflow-x-hidden">
+<!-- Background App Shell (Preserving Brand Anchor Context with subtle blur under modal overlay) -->
+<header class="sticky top-0 w-full z-10 bg-surface-container-lowest border-b border-[#E2E8F0] shadow-sm">
+<div class="flex justify-between items-center h-16 px-4 md:px-8 max-w-7xl mx-auto">
+<div class="flex items-center gap-6">
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface tracking-tight">지원금 챙김이</span>
+<nav class="hidden md:flex items-center gap-6">
+<span class="text-label-md font-label-md text-secondary hover:text-primary transition-colors cursor-pointer">서비스 소개</span>
+<span class="text-label-md font-label-md text-secondary hover:text-primary transition-colors cursor-pointer">비교분석</span>
+<span class="text-label-md font-label-md text-secondary hover:text-primary transition-colors cursor-pointer">이용방법</span>
+<span class="text-label-md font-label-md text-secondary hover:text-primary transition-colors cursor-pointer">요금제</span>
+</nav>
+</div>
+<div class="flex items-center gap-3">
+<button class="text-label-md font-label-md text-slate-600 px-3 py-1.5 hover:text-slate-900 transition-colors">로그인</button>
+<button class="bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-label-md font-label-md px-4 py-2 rounded-lg font-semibold transition-all">무료로 시작하기</button>
+</div>
+</div>
+</header>
+<!-- Ambient Backdrop Mock Content (Subtle Dashboard Silhouette) -->
+<main class="max-w-7xl mx-auto px-4 md:px-8 py-10 opacity-40 select-none pointer-events-none filter blur-[1px]">
+<div class="h-8 w-48 bg-slate-200 rounded mb-4"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="h-40 bg-white border border-[#E2E8F0] rounded-xl"></div>
+<div class="h-40 bg-white border border-[#E2E8F0] rounded-xl"></div>
+<div class="h-40 bg-white border border-[#E2E8F0] rounded-xl"></div>
+</div>
+</main>
+<!-- Modal Screen Overlay (Task-Focused Destination Rule: Linear Onboarding Step 3/3 Modal) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-6 bg-[#0F172A]/40 backdrop-blur-md overflow-y-auto">
+<!-- Modal Dialog Card (960px - 1024px container) -->
+<div class="w-full max-w-[1000px] my-auto bg-white rounded-2xl border border-[#E2E8F0] shadow-2xl relative overflow-hidden flex flex-col">
+<!-- Top Full Progress Bar (Step 3/3: 100%) -->
+<div class="w-full h-1.5 bg-[#EFF6FF] relative">
+<div class="h-full bg-[#2563EB] w-full transition-all duration-700 ease-out"></div>
+</div>
+<!-- Modal Main Inner Wrapper -->
+<div class="p-6 md:p-8 space-y-6">
+<!-- Header / Top Area -->
+<div class="space-y-3">
+<div class="flex items-center justify-between gap-3">
+<div class="inline-flex items-center gap-1.5 bg-[#ECFDF5] text-[#065F46] border border-[#A7F3D0] px-3 py-1 text-xs font-semibold rounded-full shadow-sm">
+<span class="text-sm">🎉</span>
+<span>축하합니다! 프로필 진단 완료</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-medium text-slate-500 font-label-md">STEP 03 / 03 빠른 온보딩 완료</span>
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+</div>
+</div>
+<div>
+<h1 class="text-[26px] sm:text-[30px] md:text-[32px] font-bold text-slate-900 leading-tight tracking-tight">
+              정부지원 준비도 <span class="text-[#2563EB] tabular-nums">62점</span>! 상위 28% 도약권입니다
+            </h1>
+<p class="text-sm md:text-base text-slate-600 mt-1 font-body-md">
+              ㈜넥스트코어님과 동일한 업력 2년차 IT/SaaS 기업 대비 <span class="text-[#2563EB] font-semibold">4점 우수한 점수</span>입니다.
+            </p>
+</div>
+</div>
+<!-- Two Columns Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+<!-- Left Column (approx 37% width: 5 cols on 12-col grid) -->
+<div class="lg:col-span-5 rounded-xl border border-slate-200 bg-white p-5 shadow-sm flex flex-col justify-between space-y-5">
+<div>
+<!-- Card Header -->
+<div class="flex justify-between items-center pb-3 border-b border-slate-100">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-wider font-label-sm">DIAGNOSTIC SCORE</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  State: Done
+                </span>
+</div>
+<!-- Donut Score Gauge Display -->
+<div class="py-4 flex flex-col items-center justify-center relative">
+<div class="relative w-36 h-36 flex items-center justify-center">
+<!-- SVG Circular Ring -->
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 120 120">
+<circle cx="60" cy="60" fill="transparent" r="50" stroke="#F1F5F9" stroke-width="9"></circle>
+<circle cx="60" cy="60" fill="transparent" r="50" stroke="url(#blue-gradient)" stroke-dasharray="314.159" stroke-dashoffset="119.38" stroke-linecap="round" stroke-width="9"></circle>
+<defs>
+<lineargradient id="blue-gradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#2563EB"></stop>
+<stop offset="100%" stop-color="#0D9488"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="text-[11px] font-medium text-slate-400">종합 준비도</span>
+<div class="flex items-baseline justify-center">
+<span class="text-3xl font-extrabold text-slate-900 tracking-tight tabular-nums">62</span>
+<span class="text-xs font-medium text-slate-400 ml-0.5">/100</span>
+</div>
+<span class="text-[10px] font-semibold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded mt-0.5">유망 진입 단계</span>
+</div>
+</div>
+</div>
+<!-- Detailed Score Breakdown Bars -->
+<div class="space-y-3 pt-1">
+<!-- Bar 1 -->
+<div>
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-medium text-slate-700">1. R&amp;D 역량</span>
+<span class="font-semibold text-slate-900 tabular-nums">80점</span>
+</div>
+<div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-blue-600 rounded-full" style="width: 80%"></div>
+</div>
+</div>
+<!-- Bar 2 -->
+<div>
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-medium text-slate-700">2. 인력 구성</span>
+<span class="font-semibold text-slate-900 tabular-nums">70점</span>
+</div>
+<div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-blue-500 rounded-full" style="width: 70%"></div>
+</div>
+</div>
+<!-- Bar 3 -->
+<div>
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-medium text-slate-700">3. 매출 성장성</span>
+<span class="font-semibold text-slate-900 tabular-nums">60점</span>
+</div>
+<div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-blue-500 rounded-full" style="width: 60%"></div>
+</div>
+</div>
+<!-- Bar 4 -->
+<div>
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-medium text-slate-700">4. 지식재산권(IP)</span>
+<span class="font-semibold text-slate-900 tabular-nums">50점</span>
+</div>
+<div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-indigo-500 rounded-full" style="width: 50%"></div>
+</div>
+</div>
+<!-- Bar 5 -->
+<div>
+<div class="flex justify-between items-center text-xs mb-1">
+<div class="flex items-center gap-1.5">
+<span class="font-medium text-slate-700">5. 인증 지표</span>
+<span class="text-[10px] font-semibold text-red-600 bg-red-50 px-1 py-0.2 rounded border border-red-200">보완필요</span>
+</div>
+<span class="font-semibold text-amber-600 tabular-nums">40점</span>
+</div>
+<div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-amber-500 rounded-full" style="width: 40%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer note inside left card -->
+<div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-slate-400">info</span>
+                기보/신보 보증 평가모델 기반
+              </span>
+<span class="font-semibold text-slate-700">신뢰도 98.4%</span>
+</div>
+</div>
+<!-- Right Column (approx 63% width: 7 cols on 12-col grid) -->
+<div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+<!-- Top Two Stat Cards (2 Cols) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+<!-- Stat Card 1 -->
+<div class="bg-blue-50/60 border border-blue-100 rounded-xl p-4 flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-medium text-slate-600 font-label-sm">즉시 신청 가능 공고</span>
+<span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</span>
+</div>
+<div>
+<div class="text-2xl font-bold text-slate-900 tracking-tight tabular-nums">11개 공고</div>
+<div class="text-xs text-blue-700 font-medium mt-1 flex items-center gap-1">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    자격 결격 사유 0건 확인
+                  </div>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-medium text-slate-600 font-label-sm">총 수혜 가능 한도</span>
+<span class="w-7 h-7 rounded-lg bg-slate-200/80 flex items-center justify-center text-slate-700">
+<span class="material-symbols-outlined text-lg">trending_up</span>
+</span>
+</div>
+<div>
+<div class="text-2xl font-bold text-[#2563EB] tracking-tight tabular-nums">최대 3.5억원</div>
+<div class="text-xs text-slate-500 font-normal mt-1">R&amp;D 2.5억 + 바우처 1억</div>
+</div>
+</div>
+</div>
+<!-- Middle: Large Top Recommended Grant Card -->
+<div class="border-2 border-blue-600/30 bg-white rounded-xl p-5 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<!-- Decorative highlight bar -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-500"></div>
+<div>
+<!-- Top Meta Tags Flex -->
+<div class="flex items-center gap-2 flex-wrap">
+<span class="bg-red-50 text-red-700 border border-red-200 px-2 py-0.5 rounded text-xs font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-ping"></span>
+                    D-12 마감임박
+                  </span>
+<span class="text-xs text-slate-500 font-medium">이번 달 추천 1순위</span>
+<span class="bg-blue-50 text-blue-700 border border-blue-200 px-2 py-0.5 rounded text-xs font-bold ml-auto tabular-nums">
+                    92% 적합
+                  </span>
+</div>
+<!-- Title & Description -->
+<h3 class="text-lg font-bold text-slate-900 mt-2.5 leading-snug">
+                  2025 창업도약패키지 (스케일업 R&amp;D)
+                </h3>
+<p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                  중소벤처기업부 주관 · 최대 사업화 자금 2.5억원 + 글로벌 진출 연계
+                </p>
+</div>
+<!-- Card Footer Row -->
+<div class="text-xs text-slate-500 flex flex-col sm:flex-row sm:items-center justify-between pt-3 border-t border-slate-100 mt-3.5 gap-2">
+<div class="flex items-center gap-1.5 text-slate-600">
+<span class="material-symbols-outlined text-[16px] text-slate-400">schedule</span>
+<span>접수 마감: 2025.04.15(화) 18:00</span>
+</div>
+<div class="flex items-center gap-1.5 text-emerald-600 font-semibold">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+<span>기술 평가 통과율 89.2%</span>
+</div>
+</div>
+</div>
+<!-- Mini Quick Tip Notice inside right column -->
+<div class="bg-slate-50/70 border border-slate-200/80 rounded-lg p-2.5 flex items-center gap-2 text-xs text-slate-600">
+<span class="material-symbols-outlined text-[18px] text-blue-600">tips_and_updates</span>
+<span>작성 가이드 양식 3종 및 선행 합격 사업계획서 템플릿 열람 권한이 자동 부여되었습니다.</span>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Roadmap Simulation -->
+<div class="space-y-3 pt-2 border-t border-slate-100">
+<div class="flex items-center justify-between">
+<h2 class="text-sm sm:text-base font-bold text-slate-900 flex items-center gap-1.5">
+<span>🚀</span>
+<span>합격 안정권(80점+) 돌파를 위한 로드맵 시뮬레이션</span>
+</h2>
+<span class="text-xs text-slate-500 hidden sm:inline-block font-label-sm">실행 즉시 가점 반영</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+<!-- Simulation Card A -->
+<div class="border border-slate-200 bg-slate-50/70 rounded-xl p-4 hover:border-blue-300 hover:bg-white transition-all group flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="bg-amber-100 text-amber-900 border border-amber-300 text-xs font-semibold px-2 py-0.5 rounded tabular-nums">
+                    가점 부스터 +12점 → 총 74점
+                  </span>
+<span class="text-[10px] text-slate-400 uppercase tracking-wide">Option 1</span>
+</div>
+<h4 class="font-bold text-slate-900 text-sm mt-2.5">
+                  벤처기업인증 취득 시
+                </h4>
+<p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                  소요 기간 약 45일 · 합격률 96.4% 패스트플레이북 제공
+                </p>
+</div>
+<a class="text-xs font-semibold text-[#2563EB] mt-3 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform" href="#playbook">
+<span>3주 완성 플레이북 보기</span>
+<span>→</span>
+</a>
+</div>
+<!-- Simulation Card B -->
+<div class="border border-slate-200 bg-slate-50/70 rounded-xl p-4 hover:border-blue-300 hover:bg-white transition-all group flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-semibold px-2 py-0.5 rounded tabular-nums">
+                      80점 돌파 키 +8점 → 총 82점 도달!
+                    </span>
+<span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-1.5 py-0.5 rounded">꿀팁패스</span>
+</div>
+<span class="text-[10px] text-slate-400 uppercase tracking-wide">Option 2</span>
+</div>
+<h4 class="font-bold text-slate-900 text-sm mt-2.5">
+                  기업부설연구소 승격 (연구전담부서 전환)
+                </h4>
+<p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                  예상 소요 2~3주 · 인증 즉시 법인세/R&amp;D 가점 연계
+                </p>
+</div>
+<a class="text-xs font-semibold text-[#2563EB] mt-3 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform" href="#lab-checklist">
+<span>연구소 승격 체크리스트</span>
+<span>→</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="bg-slate-50/90 border-t border-[#E2E8F0] px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+<!-- Left: Download Button -->
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 px-4 py-2.5 rounded-lg text-sm font-medium shadow-sm transition-all active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>결과 PDF 리포트 다운로드</span>
+</button>
+<!-- Center: 3 Step Dots -->
+<div aria-label="진행 단계" class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-blue-300" title="Step 1 완료"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-blue-300" title="Step 2 완료"></div>
+<div class="w-6 h-2.5 rounded-full bg-[#2563EB] ring-2 ring-blue-100" title="Step 3 완료 (현재)"></div>
+</div>
+<!-- Right: Primary CTA -->
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-5 py-2.5 rounded-lg text-sm font-semibold shadow-sm transition-all active:scale-[0.99]" type="button">
+<span>내 맞춤 지원금 3개 및 대시보드 바로가기</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

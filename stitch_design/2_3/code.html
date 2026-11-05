@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-slate-50" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>온보딩 2/3 - 역량 체크 | 지원금 챙김이</title>
+<!-- Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#2563eb",
+            "surface-bright": "#f8f9ff",
+            "inverse-surface": "#213145",
+            "inverse-primary": "#b4c5ff",
+            "on-surface": "#0b1c30",
+            "primary": "#004ac6",
+            "on-tertiary-fixed": "#410002",
+            "on-primary-container": "#eeefff",
+            "primary-fixed-dim": "#b4c5ff",
+            "primary-fixed": "#dbe1ff",
+            "secondary-container": "#dae2fd",
+            "secondary-fixed": "#dae2fd",
+            "outline-variant": "#c3c6d7",
+            "surface-container": "#e5eeff",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-container": "#5c647a",
+            "secondary-fixed-dim": "#bec6e0",
+            "surface-container-highest": "#d3e4fe",
+            "inverse-on-surface": "#eaf1ff",
+            "surface-container-low": "#eff4ff",
+            "background": "#f8f9ff",
+            "tertiary-fixed": "#ffdad6",
+            "error-container": "#ffdad6",
+            "on-primary-fixed": "#00174b",
+            "on-tertiary-fixed-variant": "#93000b",
+            "on-tertiary": "#ffffff",
+            "outline": "#737686",
+            "on-secondary-fixed": "#131b2e",
+            "surface-variant": "#d3e4fe",
+            "on-primary-fixed-variant": "#003ea8",
+            "on-background": "#0b1c30",
+            "on-primary": "#ffffff",
+            "surface-dim": "#cbdbf5",
+            "tertiary-fixed-dim": "#ffb4ab",
+            "on-surface-variant": "#434655",
+            "surface-tint": "#0053db",
+            "surface": "#f8f9ff",
+            "secondary": "#565e74",
+            "on-error-container": "#93000a",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "tertiary-container": "#d52022",
+            "on-secondary": "#ffffff",
+            "surface-container-high": "#dce9ff",
+            "on-tertiary-container": "#ffecea",
+            "on-secondary-fixed-variant": "#3f465c",
+            "tertiary": "#ae0010"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "gutter-desktop": "1.5rem",
+            "margin-tablet": "1.5rem",
+            "space-md": "1rem",
+            "margin-desktop": "2.5rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "display-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "headline-md": ["Inter", "sans-serif"],
+            "headline-sm": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "display-lg-mobile": ["Inter", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "headline-lg": ["Inter", "sans-serif"],
+            "metric-num": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "metric-num": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .tnum {
+      font-feature-settings: "tnum" 1;
+    }
+  </style>
+</head>
+<body class="min-h-full bg-slate-900/40 font-body-md text-on-surface antialiased flex flex-col justify-center items-center p-3 sm:p-6 md:p-10 backdrop-blur-sm">
+<!-- Modal Container (960px max-width, clinical clean white, razor borders) -->
+<main class="w-full max-w-[960px] bg-surface-container-lowest rounded-2xl border border-slate-200 shadow-xl overflow-hidden flex flex-col my-auto transition-all">
+<!-- Progress Indicator Header -->
+<div class="px-6 md:px-8 pt-6 pb-4 border-b border-slate-100 bg-surface-container-lowest">
+<div class="flex items-center justify-between mb-2.5">
+<div class="flex items-center space-x-2">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-100">
+            STEP 02 / 03
+          </span>
+<span class="text-xs md:text-sm font-medium text-slate-700">빠른 온보딩 (2/3단계)</span>
+</div>
+<div class="flex items-center text-xs font-medium text-slate-500 space-x-1.5">
+<span class="material-symbols-outlined text-[16px] text-slate-400">schedule</span>
+<span>예상 소요시간 약 30초</span>
+</div>
+</div>
+<!-- Linear Progress Bar (66%) -->
+<div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500 ease-out" style="width: 66%;"></div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="p-6 md:p-8 space-y-6 md:space-y-7">
+<!-- Header Section: Title & Score Indicator Donut -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-2 border-b border-slate-100">
+<div>
+<h1 class="text-headline-md font-headline-md text-slate-900 tracking-tight">어떤 준비가 되어있나요?</h1>
+<p class="text-body-md font-body-md text-slate-500 mt-1">
+            보유 중인 인증이나 연구 역량을 선택하면 실시간 합격 준비도 점수가 계산됩니다.
+          </p>
+</div>
+<!-- Real-time Score Donut Indicator Widget -->
+<div class="flex items-center gap-3.5 bg-slate-50/80 px-4 py-3 rounded-xl border border-slate-200/80 self-start md:self-auto">
+<!-- Circular Progress SVG -->
+<div class="relative w-12 h-12 flex-shrink-0 flex items-center justify-center">
+<svg class="w-12 h-12 transform -rotate-90" viewbox="0 0 44 44">
+<circle cx="22" cy="22" fill="none" r="18" stroke="#E2E8F0" stroke-width="3.5"></circle>
+<circle cx="22" cy="22" fill="none" r="18" stroke="#2563EB" stroke-dasharray="113.1" stroke-dashoffset="43" stroke-linecap="round" stroke-width="3.5"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-xs font-bold text-slate-900 tnum">62</span>
+<span class="text-[10px] text-slate-400 font-medium">/100</span>
+</div>
+</div>
+<!-- Score Metrics & Pill -->
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-emerald-600 font-semibold text-xs leading-none">
+<span class="material-symbols-outlined text-[15px] font-bold">arrow_upward</span>
+<span>현재 준비도 +24점 상승 중!</span>
+</div>
+<p class="text-[11px] text-slate-500 mt-1 font-normal tnum">
+              기본 38점 + <span class="font-semibold text-blue-700">역량가점 24점</span>
+</p>
+</div>
+</div>
+</div>
+<!-- 6 Competency / Certification Cards Grid (2 cols x 3 rows) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 md:gap-4">
+<!-- Card 1 [SELECTED / ON] -->
+<div class="relative flex items-start justify-between p-4 md:p-5 rounded-xl border-2 border-primary-container bg-blue-50/20 ring-1 ring-blue-500/10 shadow-sm transition-all">
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-lg bg-blue-100/70 text-primary-container flex items-center justify-center flex-shrink-0 border border-blue-200">
+<span class="material-symbols-outlined text-[22px]">settings</span>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-semibold text-slate-900 text-sm md:text-base">벤처기업인증</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-[#EFF6FF] text-[#1E40AF] border border-[#BFDBFE]">
+                  +12점 가점
+                </span>
+</div>
+<p class="text-xs md:text-sm text-slate-600 mt-1.5 leading-snug">
+                서면평가 면제 및 주요 R&amp;D 필수 요건
+              </p>
+</div>
+</div>
+<!-- Toggle Switch [ON] -->
+<button aria-pressed="true" class="ml-2 flex-shrink-0 w-11 h-6 bg-primary-container rounded-full relative transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer" type="button">
+<span class="sr-only">벤처기업인증 활성화 토글</span>
+<span class="translate-x-5 inline-block w-5 h-5 transform bg-white rounded-full transition-transform duration-200 shadow-sm mt-0.5"></span>
+</button>
+</div>
+<!-- Card 2 [SELECTED / ON] -->
+<div class="relative flex items-start justify-between p-4 md:p-5 rounded-xl border-2 border-primary-container bg-blue-50/20 ring-1 ring-blue-500/10 shadow-sm transition-all">
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-lg bg-blue-100/70 text-primary-container flex items-center justify-center flex-shrink-0 border border-blue-200">
+<span class="material-symbols-outlined text-[22px]">science</span>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-semibold text-slate-900 text-sm md:text-base">기업부설연구소 / 전담부서</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-[#EFF6FF] text-[#1E40AF] border border-[#BFDBFE]">
+                  +10점 가점
+                </span>
+</div>
+<p class="text-xs md:text-sm text-slate-600 mt-1.5 leading-snug">
+                연구개발 R&amp;D 인건비 계상 및 조세 감면
+              </p>
+</div>
+</div>
+<!-- Toggle Switch [ON] -->
+<button aria-pressed="true" class="ml-2 flex-shrink-0 w-11 h-6 bg-primary-container rounded-full relative transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer" type="button">
+<span class="sr-only">기업부설연구소 전담부서 활성화 토글</span>
+<span class="translate-x-5 inline-block w-5 h-5 transform bg-white rounded-full transition-transform duration-200 shadow-sm mt-0.5"></span>
+</button>
+</div>
+<!-- Card 3 [SELECTED / ON] -->
+<div class="relative flex items-start justify-between p-4 md:p-5 rounded-xl border-2 border-primary-container bg-blue-50/20 ring-1 ring-blue-500/10 shadow-sm transition-all">
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-lg bg-blue-100/70 text-primary-container flex items-center justify-center flex-shrink-0 border border-blue-200">
+<span class="material-symbols-outlined text-[22px]">lightbulb</span>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-semibold text-slate-900 text-sm md:text-base">지식재산권 (특허/실용신안)</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-[#EFF6FF] text-[#1E40AF] border border-[#BFDBFE]">
+                  +8점 가점
+                </span>
+</div>
+<p class="text-xs md:text-sm text-slate-600 mt-1.5 leading-snug">
+                등록 특허 1건 이상 또는 출원 2건
+              </p>
+</div>
+</div>
+<!-- Toggle Switch [ON] -->
+<button aria-pressed="true" class="ml-2 flex-shrink-0 w-11 h-6 bg-primary-container rounded-full relative transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer" type="button">
+<span class="sr-only">지식재산권 활성화 토글</span>
+<span class="translate-x-5 inline-block w-5 h-5 transform bg-white rounded-full transition-transform duration-200 shadow-sm mt-0.5"></span>
+</button>
+</div>
+<!-- Card 4 [UNSELECTED / OFF] -->
+<div class="relative flex items-start justify-between p-4 md:p-5 rounded-xl border border-slate-200 bg-white hover:border-slate-300 transition-all">
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center flex-shrink-0 border border-slate-200/80">
+<span class="material-symbols-outlined text-[22px]">rocket_launch</span>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-semibold text-slate-900 text-sm md:text-base">이노비즈 (Inno-Biz)</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-600 border border-slate-200">
+                  +7점 상승 가능
+                </span>
+</div>
+<p class="text-xs md:text-sm text-slate-500 mt-1.5 leading-snug">
+                기술혁신형 중소기업 인증 (업력 3년 이상)
+              </p>
+</div>
+</div>
+<!-- Toggle Switch [OFF] -->
+<button aria-pressed="false" class="ml-2 flex-shrink-0 w-11 h-6 bg-slate-200 rounded-full relative transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer" type="button">
+<span class="sr-only">이노비즈 활성화 토글</span>
+<span class="translate-x-0.5 inline-block w-5 h-5 transform bg-white rounded-full transition-transform duration-200 shadow-sm mt-0.5"></span>
+</button>
+</div>
+<!-- Card 5 [UNSELECTED / OFF] -->
+<div class="relative flex items-start justify-between p-4 md:p-5 rounded-xl border border-slate-200 bg-white hover:border-slate-300 transition-all">
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center flex-shrink-0 border border-slate-200/80">
+<span class="material-symbols-outlined text-[22px]">apartment</span>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-semibold text-slate-900 text-sm md:text-base">메인비즈 (Main-Biz)</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-600 border border-slate-200">
+                  +5점 상승 가능
+                </span>
+</div>
+<p class="text-xs md:text-sm text-slate-500 mt-1.5 leading-snug">
+                경영혁신형 중소기업 인증
+              </p>
+</div>
+</div>
+<!-- Toggle Switch [OFF] -->
+<button aria-pressed="false" class="ml-2 flex-shrink-0 w-11 h-6 bg-slate-200 rounded-full relative transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer" type="button">
+<span class="sr-only">메인비즈 활성화 토글</span>
+<span class="translate-x-0.5 inline-block w-5 h-5 transform bg-white rounded-full transition-transform duration-200 shadow-sm mt-0.5"></span>
+</button>
+</div>
+<!-- Card 6 [UNSELECTED / OFF] -->
+<div class="relative flex items-start justify-between p-4 md:p-5 rounded-xl border border-slate-200 bg-white hover:border-slate-300 transition-all">
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center flex-shrink-0 border border-slate-200/80">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-semibold text-slate-900 text-sm md:text-base">ISO 인증 (9001/14001)</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-600 border border-slate-200">
+                  +4점 상승 가능
+                </span>
+</div>
+<p class="text-xs md:text-sm text-slate-500 mt-1.5 leading-snug">
+                국제표준 품질/환경 경영시스템
+              </p>
+</div>
+</div>
+<!-- Toggle Switch [OFF] -->
+<button aria-pressed="false" class="ml-2 flex-shrink-0 w-11 h-6 bg-slate-200 rounded-full relative transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer" type="button">
+<span class="sr-only">ISO 인증 활성화 토글</span>
+<span class="translate-x-0.5 inline-block w-5 h-5 transform bg-white rounded-full transition-transform duration-200 shadow-sm mt-0.5"></span>
+</button>
+</div>
+</div>
+<!-- Bottom Highlight Banner -->
+<div class="w-full rounded-xl bg-[#EFF6FF] border border-[#BFDBFE] p-4 flex items-center space-x-3 text-slate-800">
+<span class="flex-shrink-0 text-amber-500 text-lg">⚡</span>
+<p class="text-xs md:text-sm leading-relaxed">
+          3개 역량 보유 확인으로 즉시 지원 가능한 정부지원금이 
+          <span class="font-bold text-[#2563EB] tnum">4건</span>에서 
+          <span class="font-bold text-[#2563EB] tnum">11건</span>으로 
+          <span class="font-bold text-[#2563EB] tnum">2.8배</span> 증가했습니다!
+        </p>
+</div>
+</div>
+<!-- Modal Footer / Bottom Bar -->
+<div class="px-6 md:px-8 py-5 border-t border-slate-200 bg-slate-50/70 flex flex-col sm:flex-row items-center justify-between gap-4">
+<!-- Back Navigation -->
+<a class="inline-flex items-center text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors duration-150 order-2 sm:order-1" href="#">
+<span class="material-symbols-outlined text-[18px] mr-1">arrow_back</span>
+        회사 정보 (1/3)
+      </a>
+<!-- Center Step Indicator Dots -->
+<div class="flex items-center space-x-2 order-1 sm:order-2">
+<span class="w-2.5 h-2.5 rounded-full bg-blue-400" title="Step 1 완료"></span>
+<span class="w-3 h-3 rounded-full bg-primary-container ring-4 ring-blue-100" title="Step 2 현재"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-slate-300" title="Step 3 예정"></span>
+</div>
+<!-- Right Action CTA -->
+<div class="w-full sm:w-auto order-3">
+<button class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-2.5 rounded-lg bg-primary-container hover:bg-blue-700 text-white font-semibold text-sm transition-all duration-150 shadow-sm active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" type="button">
+<span>다음: AI 진단 리포트 확인 (3/3)</span>
+<span class="material-symbols-outlined text-[18px] ml-1.5">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Security & Compliance Micro Badge -->
+<div class="py-2.5 px-6 bg-slate-100/60 border-t border-slate-200/60 flex items-center justify-center space-x-1.5 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-[13px] text-slate-400">lock</span>
+<span>ISO 27001 및 공공 마이데이터 보안 규정 준수</span>
+</div>
+</main>
+<!-- Interactive Demo Script for Toggle Interaction -->
+<script>
+    document.querySelectorAll('button[aria-pressed]').forEach(button => {
+      button.addEventListener('click', () => {
+        const isPressed = button.getAttribute('aria-pressed') === 'true';
+        const card = button.closest('.relative');
+        const badge = card.querySelector('span.rounded');
+        const iconContainer = card.querySelector('.rounded-lg');
+        const toggleKnob = button.querySelector('span:not(.sr-only)');
+
+        if (isPressed) {
+          button.setAttribute('aria-pressed', 'false');
+          button.classList.remove('bg-primary-container');
+          button.classList.add('bg-slate-200');
+          toggleKnob.classList.remove('translate-x-5');
+          toggleKnob.classList.add('translate-x-0.5');
+
+          // Styling changes for card
+          card.classList.remove('border-2', 'border-primary-container', 'bg-blue-50/20', 'ring-1', 'ring-blue-500/10');
+          card.classList.add('border', 'border-slate-200', 'bg-white');
+          
+          if (badge) {
+            badge.className = 'px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-600 border border-slate-200';
+            if (badge.textContent.includes('가점')) {
+              badge.textContent = badge.textContent.replace('가점', '상승 가능');
+            }
+          }
+
+          if (iconContainer) {
+            iconContainer.className = 'w-10 h-10 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center flex-shrink-0 border border-slate-200/80';
+          }
+        } else {
+          button.setAttribute('aria-pressed', 'true');
+          button.classList.remove('bg-slate-200');
+          button.classList.add('bg-primary-container');
+          toggleKnob.classList.remove('translate-x-0.5');
+          toggleKnob.classList.add('translate-x-5');
+
+          // Styling changes for card
+          card.classList.add('border-2', 'border-primary-container', 'bg-blue-50/20', 'ring-1', 'ring-blue-500/10');
+          card.classList.remove('border', 'border-slate-200', 'bg-white');
+
+          if (badge) {
+            badge.className = 'px-2 py-0.5 rounded text-[11px] font-semibold bg-[#EFF6FF] text-[#1E40AF] border border-[#BFDBFE]';
+            if (badge.textContent.includes('상승 가능')) {
+              badge.textContent = badge.textContent.replace('상승 가능', '가점');
+            }
+          }
+
+          if (iconContainer) {
+            iconContainer.className = 'w-10 h-10 rounded-lg bg-blue-100/70 text-primary-container flex items-center justify-center flex-shrink-0 border border-blue-200';
+          }
+        }
+      });
+    });
+  </script>
+</body></html>

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>지원금 챙김이 - 벤처기업인증 완전 정복 플레이북</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#2563eb",
+            "surface-container-highest": "#d3e4fe",
+            "on-tertiary-fixed-variant": "#93000b",
+            "on-background": "#0b1c30",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#131b2e",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed": "#410002",
+            "on-secondary-container": "#5c647a",
+            "primary-fixed": "#dbe1ff",
+            "inverse-on-surface": "#eaf1ff",
+            "on-primary-fixed": "#00174b",
+            "outline": "#737686",
+            "primary-fixed-dim": "#b4c5ff",
+            "secondary-fixed": "#dae2fd",
+            "outline-variant": "#c3c6d7",
+            "primary": "#004ac6",
+            "tertiary-container": "#d52022",
+            "surface-bright": "#f8f9ff",
+            "on-error": "#ffffff",
+            "surface-tint": "#0053db",
+            "on-secondary-fixed-variant": "#3f465c",
+            "surface-variant": "#d3e4fe",
+            "secondary-container": "#dae2fd",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed-dim": "#bec6e0",
+            "background": "#f8f9ff",
+            "tertiary": "#ae0010",
+            "on-primary": "#ffffff",
+            "inverse-surface": "#213145",
+            "on-primary-container": "#eeefff",
+            "inverse-primary": "#b4c5ff",
+            "on-surface-variant": "#434655",
+            "surface-dim": "#cbdbf5",
+            "surface-container": "#e5eeff",
+            "tertiary-fixed": "#ffdad6",
+            "tertiary-fixed-dim": "#ffb4ab",
+            "error-container": "#ffdad6",
+            "surface": "#f8f9ff",
+            "secondary": "#565e74",
+            "on-tertiary-container": "#ffecea",
+            "on-primary-fixed-variant": "#003ea8",
+            "surface-container-low": "#eff4ff",
+            "surface-container-high": "#dce9ff",
+            "on-error-container": "#93000a",
+            "on-surface": "#0b1c30",
+            "error": "#ba1a1a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "space-lg": "1.5rem",
+            "gutter-desktop": "1.5rem",
+            "margin-desktop": "2.5rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2rem",
+            "gutter": "1rem",
+            "margin-tablet": "1.5rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "body-md": ["Inter", "sans-serif"],
+            "headline-sm": ["Inter", "sans-serif"],
+            "headline-lg": ["Inter", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "display-lg-mobile": ["Inter", "sans-serif"],
+            "display-lg": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "metric-num": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "headline-md": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "metric-num": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .tnum {
+      font-feature-settings: "tnum" 1;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased font-body-md min-h-screen flex flex-col selection:bg-surface-container-highest selection:text-primary">
+<!-- Top Navigation Bar (Shared Component Anchor) -->
+<header class="sticky top-0 w-full z-50 bg-surface-container-lowest shadow-sm">
+<div class="flex justify-between items-center h-16 px-4 md:px-8 max-w-7xl mx-auto">
+<!-- Brand & Left Nav Links -->
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 group" href="#">
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="shield_person">shield_person</span>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface tracking-tight">지원금 챙김이</span>
+</a>
+<!-- Desktop Navigation Items -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-secondary hover:text-primary transition-colors duration-150 text-label-md font-label-md" href="#">
+            맞춤 공고 탐색
+          </a>
+<a class="text-primary font-semibold text-label-md font-label-md relative py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-primary-container" href="#">
+            역량 및 인증 관리
+          </a>
+<a class="text-secondary hover:text-primary transition-colors duration-150 text-label-md font-label-md" href="#">
+            비교분석
+          </a>
+<a class="text-secondary hover:text-primary transition-colors duration-150 text-label-md font-label-md" href="#">
+            이용방법
+          </a>
+<a class="text-secondary hover:text-primary transition-colors duration-150 text-label-md font-label-md" href="#">
+            요금제
+          </a>
+</nav>
+</div>
+<!-- Right User Profile Context & Primary Action -->
+<div class="flex items-center gap-4">
+<!-- Business Context Pill -->
+<div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="text-body-sm font-body-sm font-semibold">(주)넥스트코어</span>
+<span class="text-secondary text-label-sm font-label-sm">| IT/SaaS</span>
+</div>
+<button class="h-9 px-4 rounded-lg bg-primary-container text-white text-label-md font-label-md hover:bg-primary transition-colors duration-150 active:scale-[0.99] flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="add_task">add_task</span>
+<span>무료로 시작하기</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas Container -->
+<main class="flex-1 max-w-7xl w-full mx-auto px-4 md:px-8 py-6">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-body-sm font-body-sm text-secondary mb-5">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]" data-icon="home">home</span>
+<span>홈</span>
+</a>
+<span class="material-symbols-outlined text-[14px] text-outline-variant" data-icon="chevron_right">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">역량 및 인증 관리</a>
+<span class="material-symbols-outlined text-[14px] text-outline-variant" data-icon="chevron_right">chevron_right</span>
+<span class="text-on-surface font-semibold">벤처기업인증 3주 완성 플레이북</span>
+</nav>
+<!-- Header Hero Banner Card -->
+<section class="bg-surface-container-lowest rounded-2xl p-6 md:p-8 mb-8 shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<div class="space-y-3">
+<!-- Top Row Badges -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-blue-50 text-blue-800">
+<span class="material-symbols-outlined text-[14px]" data-icon="calendar_month">calendar_month</span>
+              3주(21일) 완성 로드맵
+            </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-slate-100 text-slate-700">
+<span class="material-symbols-outlined text-[14px]" data-icon="donut_large">donut_large</span>
+              전체 진행률 0/7 단계 (0%)
+            </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-emerald-50 text-emerald-800">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified">verified</span>
+              가점 +12점 확보 가능
+            </span>
+</div>
+<!-- Main Title -->
+<h1 class="text-headline-lg font-headline-lg text-on-surface tracking-tight">
+            벤처기업인증 완전 정복 플레이북
+          </h1>
+<!-- Subtitle -->
+<p class="text-body-md font-body-md text-secondary max-w-3xl leading-relaxed">
+            중기부 공식 평가 지침 기준, IT/SaaS 기업 맞춤형 혁신성장유형 21일 단기 합격 가이드. 체계적인 7단계 액션 플랜을 통해 서류 미비로 인한 탈락 리스크를 사전에 완벽 차단합니다.
+          </p>
+</div>
+<!-- Quick Actions Cluster -->
+<div class="flex sm:flex-row lg:flex-col gap-3 shrink-0">
+<button class="h-10 px-4 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface text-label-md font-label-md transition-colors flex items-center justify-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="save">save</span>
+<span>진행 상황 저장</span>
+</button>
+<button class="h-10 px-4 rounded-lg bg-primary-container text-white hover:bg-primary text-label-md font-label-md transition-colors flex items-center justify-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="download">download</span>
+<span>플레이북 PDF 가이드 다운로드</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Bento / Two Column Content Layout (65% vs 35%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- LEFT COLUMN: 7단계 수검 마일스톤 (Timeline) (65% -> col-span-8) -->
+<section class="lg:col-span-8 space-y-6">
+<!-- Section Subhead -->
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]" data-icon="account_tree">account_tree</span>
+<h2 class="text-headline-md font-headline-md text-on-surface">7단계 수검 마일스톤</h2>
+</div>
+<span class="text-body-sm font-body-sm text-secondary">
+            권장 소요기간: <strong class="text-on-surface tnum">총 21일</strong>
+</span>
+</div>
+<!-- Vertical Timeline Container -->
+<div class="relative pl-6 sm:pl-8 space-y-8 before:absolute before:left-4 sm:before:left-5 before:top-4 before:bottom-6 before:w-[2px] before:bg-outline-variant">
+<!-- STEP 1: EXPANDED ACTIVE STEP -->
+<div class="relative group">
+<!-- Timeline Node Indicator -->
+<div class="absolute -left-6 sm:-left-8 top-0 w-8 h-8 rounded-full bg-primary-container text-white flex items-center justify-center text-label-md font-label-md font-bold shadow-md ring-4 ring-blue-100 z-10 tnum">
+              01
+            </div>
+<!-- Header Rail -->
+<div class="flex flex-wrap items-center justify-between gap-2 mb-3 pt-0.5">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm text-on-surface">1. 인증 유형 진단 및 최적 트랙 선정 (혁신성장유형)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container-low text-secondary tnum">
+                  소요 기간: 2일
+                </span>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-blue-100 text-blue-800 font-semibold">
+                  진행 대기
+                </span>
+</div>
+</div>
+<!-- Expanded Body Card -->
+<div class="rounded-xl bg-surface-container-lowest p-6 shadow-sm space-y-5">
+<!-- Description Box -->
+<p class="text-body-md font-body-md text-on-surface leading-relaxed">
+<strong class="text-primary font-semibold">(주)넥스트코어</strong>와 같은 기술 기반 IT/SaaS 스타트업은 <strong>'혁신성장유형'</strong>이 합격률 <span class="text-primary font-bold tnum">92.4%</span>로 가장 유리합니다. 대규모 VC 투자 이력이 없더라도 자체 솔루션의 우수성과 시장 확장성을 객관적으로 증명할 수 있습니다.
+              </p>
+<!-- Action Checklist -->
+<div class="space-y-3 pt-1">
+<h4 class="text-label-md font-label-md text-on-surface uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="checklist">checklist</span>
+                  핵심 수검 액션 체크리스트
+                </h4>
+<div class="space-y-2">
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-colors cursor-pointer group/chk">
+<input class="mt-0.5 w-4 h-4 rounded text-primary-container focus:ring-primary focus:ring-offset-0 transition-colors" type="checkbox"/>
+<div class="flex-1">
+<span class="text-body-md font-body-md text-on-surface group-hover/chk:text-primary transition-colors">
+                        KIBO 벤처확인기관 자가진단표 작성 및 Kibo-Score 70점 사전 점검
+                      </span>
+<p class="text-body-sm font-body-sm text-secondary mt-0.5">기술평가기관(기술보증기금 등) 산정 기준표에 따른 객관적 모의 배점 산출</p>
+</div>
+</label>
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-colors cursor-pointer group/chk">
+<input class="mt-0.5 w-4 h-4 rounded text-primary-container focus:ring-primary focus:ring-offset-0 transition-colors" type="checkbox"/>
+<div class="flex-1">
+<span class="text-body-md font-body-md text-on-surface group-hover/chk:text-primary transition-colors">
+                        업력 3년 미만 특례 조항 확인 (창업 초기 기업 가점 5점 적용)
+                      </span>
+<p class="text-body-sm font-body-sm text-secondary mt-0.5">초기 창업 패널티 완화 및 R&amp;D 비율 최소기준 감면 혜택 동시 확인</p>
+</div>
+</label>
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-colors cursor-pointer group/chk">
+<input class="mt-0.5 w-4 h-4 rounded text-primary-container focus:ring-primary focus:ring-offset-0 transition-colors" type="checkbox"/>
+<div class="flex-1">
+<span class="text-body-md font-body-md text-on-surface group-hover/chk:text-primary transition-colors">
+                        주력 제품/서비스(SaaS) 기술혁신성 기술개요서 1차 초안 준비
+                      </span>
+<p class="text-body-sm font-body-sm text-secondary mt-0.5">시스템 아키텍처 다이어그램 및 데이터 파이프라인 흐름도 정리 필수</p>
+</div>
+</label>
+</div>
+</div>
+<!-- Pro Tip Callout Box -->
+<div class="bg-blue-50/70 rounded-lg p-4 flex items-start gap-3">
+<span class="text-lg leading-none">💡</span>
+<div class="text-body-sm font-body-sm text-blue-900 leading-snug">
+<span class="font-bold">챙김이 합격 팁:</span> 벤처투자유형은 5천만원 이상 유치 실적이 필수지만, <strong>혁신성장유형</strong>은 순수 기술개발 실적과 향후 3개년 사업성 평가만으로 단기 취득이 가능합니다. IT 솔루션의 소프트웨어 지식재산권(특허/프로그램등록)을 최우선으로 배치하세요.
+                </div>
+</div>
+<!-- Attached Template Downloader -->
+<div class="pt-2 flex items-center justify-between border-t border-slate-100">
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-[18px] text-emerald-600" data-icon="description">description</span>
+<span>첨부 서식: <strong>유형별 자가진단 체크시트.xlsx</strong></span>
+</div>
+<button class="h-8 px-3 rounded text-label-sm font-label-sm font-medium bg-surface-container-low text-primary hover:bg-surface-variant transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]" data-icon="file_download">file_download</span>
+<span>서식 다운로드</span>
+</button>
+</div>
+</div>
+</div>
+<!-- STEP 2: COLLAPSED -->
+<div class="relative group">
+<div class="absolute -left-6 sm:-left-8 top-2 w-8 h-8 rounded-full bg-surface-container-lowest text-secondary flex items-center justify-center text-label-md font-label-md font-semibold z-10 tnum group-hover:bg-primary-fixed transition-colors">
+              02
+            </div>
+<div class="rounded-xl bg-surface-container-lowest p-4 sm:p-5 shadow-sm hover:shadow transition-all cursor-pointer flex items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">2. 필수 제출 증빙 서류 발급 및 사전 패키징</h3>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container-low text-secondary tnum">소요 기간: 3일</span>
+</div>
+<p class="text-body-sm font-body-sm text-secondary line-clamp-1">
+                  홈택스 재무제표증명원, 4대보험 가입자명부, 주주명부 및 보유 지식재산권 증빙 6종 일괄 수집
+                </p>
+</div>
+<div class="w-8 h-8 rounded-full flex items-center justify-center text-secondary group-hover:text-primary transition-colors shrink-0">
+<span class="material-symbols-outlined text-[20px]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<!-- STEP 3: COLLAPSED -->
+<div class="relative group">
+<div class="absolute -left-6 sm:-left-8 top-2 w-8 h-8 rounded-full bg-surface-container-lowest text-secondary flex items-center justify-center text-label-md font-label-md font-semibold z-10 tnum group-hover:bg-primary-fixed transition-colors">
+              03
+            </div>
+<div class="rounded-xl bg-surface-container-lowest p-4 sm:p-5 shadow-sm hover:shadow transition-all cursor-pointer flex items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">3. 벤처기업 사업계획서 4개 파트 집중 작성</h3>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container-low text-secondary tnum">소요 기간: 5일</span>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-blue-50 text-blue-700">기술성 60점 + 사업성 40점 배점 구조</span>
+</div>
+<p class="text-body-sm font-body-sm text-secondary line-clamp-1">
+                  기술인력 보유현황, 독창성, 양산/출시 가능성, 추정 손익계산서 등 심사관 맞춤형 서술 기법 적용
+                </p>
+</div>
+<div class="w-8 h-8 rounded-full flex items-center justify-center text-secondary group-hover:text-primary transition-colors shrink-0">
+<span class="material-symbols-outlined text-[20px]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<!-- STEP 4: COLLAPSED -->
+<div class="relative group">
+<div class="absolute -left-6 sm:-left-8 top-2 w-8 h-8 rounded-full bg-surface-container-lowest text-secondary flex items-center justify-center text-label-md font-label-md font-semibold z-10 tnum group-hover:bg-primary-fixed transition-colors">
+              04
+            </div>
+<div class="rounded-xl bg-surface-container-lowest p-4 sm:p-5 shadow-sm hover:shadow transition-all cursor-pointer flex items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">4. 벤처확인종합관리시스템(V-Sure) 온라인 접수 및 수수료 납부</h3>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container-low text-secondary tnum">소요 기간: 1일</span>
+</div>
+<p class="text-body-sm font-body-sm text-secondary line-clamp-1">
+                  전담 심사기관(기보/신보/벤처기업협회) 지정 및 심사 수수료 550,000원 결제 및 접수번호 확인
+                </p>
+</div>
+<div class="w-8 h-8 rounded-full flex items-center justify-center text-secondary group-hover:text-primary transition-colors shrink-0">
+<span class="material-symbols-outlined text-[20px]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<!-- STEP 5: COLLAPSED -->
+<div class="relative group">
+<div class="absolute -left-6 sm:-left-8 top-2 w-8 h-8 rounded-full bg-surface-container-lowest text-secondary flex items-center justify-center text-label-md font-label-md font-semibold z-10 tnum group-hover:bg-primary-fixed transition-colors">
+              05
+            </div>
+<div class="rounded-xl bg-surface-container-lowest p-4 sm:p-5 shadow-sm hover:shadow transition-all cursor-pointer flex items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">5. 서류 보완 요청 대응 및 1차 심사 통과</h3>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container-low text-secondary tnum">소요 기간: 4일</span>
+</div>
+<p class="text-body-sm font-body-sm text-secondary line-clamp-1">
+                  평가관 1차 형식요건 검토에 따른 추가 소명자료(R&amp;D 투입내역 등) 48시간 내 신속 회신 체계 구축
+                </p>
+</div>
+<div class="w-8 h-8 rounded-full flex items-center justify-center text-secondary group-hover:text-primary transition-colors shrink-0">
+<span class="material-symbols-outlined text-[20px]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<!-- STEP 6: COLLAPSED -->
+<div class="relative group">
+<div class="absolute -left-6 sm:-left-8 top-2 w-8 h-8 rounded-full bg-surface-container-lowest text-secondary flex items-center justify-center text-label-md font-label-md font-semibold z-10 tnum group-hover:bg-primary-fixed transition-colors">
+              06
+            </div>
+<div class="rounded-xl bg-surface-container-lowest p-4 sm:p-5 shadow-sm hover:shadow transition-all cursor-pointer flex items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">6. 현장 실사(대면/비대면 심사관 인터뷰) 완벽 대비</h3>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container-low text-secondary tnum">소요 기간: 4일</span>
+</div>
+<p class="text-body-sm font-body-sm text-secondary line-clamp-1">
+                  전문위원 2인 사업장 방문 인터뷰, 개발자 참여 증빙, 소프트웨어 실시간 데모 시연 질의응답 시뮬레이션
+                </p>
+</div>
+<div class="w-8 h-8 rounded-full flex items-center justify-center text-secondary group-hover:text-primary transition-colors shrink-0">
+<span class="material-symbols-outlined text-[20px]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<!-- STEP 7: COLLAPSED -->
+<div class="relative group">
+<div class="absolute -left-6 sm:-left-8 top-2 w-8 h-8 rounded-full bg-surface-container-lowest text-secondary flex items-center justify-center text-label-md font-label-md font-semibold z-10 tnum group-hover:bg-primary-fixed transition-colors">
+              07
+            </div>
+<div class="rounded-xl bg-surface-container-lowest p-4 sm:p-5 shadow-sm hover:shadow transition-all cursor-pointer flex items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">7. 벤처기업 확인서 최종 발급 및 정부지원금 가점 등록</h3>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container-low text-secondary tnum">소요 기간: 2일</span>
+</div>
+<p class="text-body-sm font-body-sm text-secondary line-clamp-1">
+                  중기부 벤처기업 확인서 온라인 출력, 지원금 챙김이 기업 프로필 자동 연동 및 R&amp;D 가점 활성화
+                </p>
+</div>
+<div class="w-8 h-8 rounded-full flex items-center justify-center text-secondary group-hover:text-primary transition-colors shrink-0">
+<span class="material-symbols-outlined text-[20px]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RIGHT COLUMN: Sticky Sidebar Cards (35% -> col-span-4) -->
+<aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-20">
+<!-- CARD 1: At a Glance Metrics -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm space-y-4">
+<div class="flex items-center gap-2 pb-3 border-b border-slate-100">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="analytics">analytics</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">벤처인증 필수 수검 개요</h3>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3 rounded-xl bg-surface">
+<span class="text-label-sm font-label-sm text-secondary block">심사 수수료</span>
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface tnum mt-0.5 block">550,000원</span>
+<span class="text-[11px] text-secondary">VAT 포함 (혁신성장)</span>
+</div>
+<div class="p-3 rounded-xl bg-surface">
+<span class="text-label-sm font-label-sm text-secondary block">최종 합격선</span>
+<span class="text-headline-sm font-headline-sm font-bold text-primary tnum mt-0.5 block">70점 이상</span>
+<span class="text-[11px] text-secondary">80점 이상 안정권 목표</span>
+</div>
+<div class="p-3 rounded-xl bg-surface">
+<span class="text-label-sm font-label-sm text-secondary block">유효 기간</span>
+<span class="text-body-md font-body-md font-bold text-on-surface mt-0.5 block">확인일로부터 3년</span>
+<span class="text-[11px] text-secondary">만료 2개월 전 갱신</span>
+</div>
+<div class="p-3 rounded-xl bg-surface">
+<span class="text-label-sm font-label-sm text-secondary block">법인세 혜택</span>
+<span class="text-body-md font-body-md font-bold text-emerald-700 mt-0.5 block">최대 50% 감면</span>
+<span class="text-[11px] text-secondary">창업 3년내 취득 시</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low text-label-sm font-label-sm text-secondary flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="info">info</span>
+<span>중소벤처기업진흥공단 및 기술보증기금 평가 공시 기준</span>
+</div>
+</div>
+<!-- CARD 2: Mandatory 6 Documents -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-slate-100">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="folder_zip">folder_zip</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">필수 준비 서류 6종</h3>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-semibold tnum">0/6 완료</span>
+</div>
+<div class="space-y-2.5">
+<!-- Doc Item 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container-low transition-colors">
+<label class="flex items-center gap-2.5 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface font-medium">1. 사업계획서 (V-Sure 표준 서식)</span>
+</label>
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-blue-100 text-blue-800">
+                준비완료
+              </span>
+</div>
+<!-- Doc Item 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container-low transition-colors">
+<label class="flex items-center gap-2.5 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface font-medium">2. 최근 3개년 표준재무제표증명원</span>
+</label>
+<span class="text-label-sm font-label-sm text-secondary">홈택스</span>
+</div>
+<!-- Doc Item 3 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container-low transition-colors">
+<label class="flex items-center gap-2.5 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface font-medium">3. 법인등기부등본 (말소사항 포함)</span>
+</label>
+<span class="text-label-sm font-label-sm text-secondary">인터넷등기소</span>
+</div>
+<!-- Doc Item 4 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container-low transition-colors">
+<label class="flex items-center gap-2.5 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface font-medium">4. 4대보험 사업장 가입자 명부</span>
+</label>
+<span class="text-label-sm font-label-sm text-secondary">인력 증빙</span>
+</div>
+<!-- Doc Item 5 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container-low transition-colors">
+<label class="flex items-center gap-2.5 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface font-medium">5. 특허/지식재산권 등록원부</span>
+</label>
+<span class="text-label-sm font-label-sm text-secondary">키프리스</span>
+</div>
+<!-- Doc Item 6 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container-low transition-colors">
+<label class="flex items-center gap-2.5 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface font-medium">6. 연구개발 전담부서/연구소 인정서</span>
+</label>
+<span class="text-label-sm font-label-sm text-secondary">보유 시</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-1 text-label-md font-label-md text-primary hover:underline pt-1" href="#">
+<span>원클릭 서류 자동 일괄 수집 가이드</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- CARD 3: Disqualification Warning TOP 3 -->
+<div class="rounded-2xl p-5 bg-red-50/70 border border-red-200/80 space-y-3.5">
+<div class="flex items-center gap-2 text-error">
+<span class="material-symbols-outlined text-[20px]" data-icon="warning">warning</span>
+<h3 class="text-label-md font-label-md font-bold text-red-900 tracking-tight">대표적 불합격 요인 TOP 3 (반드시 주의)</h3>
+</div>
+<ul class="space-y-2.5 text-body-sm font-body-sm text-red-950">
+<li class="flex items-start gap-2">
+<span class="w-4 h-4 rounded-full bg-red-200 text-red-900 flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5 tnum">1</span>
+<div>
+<strong class="font-semibold">매출 증빙 부실 및 추정 근거 부족:</strong>
+<p class="text-red-800 text-[12px] mt-0.5">단순 낙관적 매출 전망 기재 시 탈락 1순위. 파이프라인 계약서나 POC 확약서가 첨부되어야 합니다.</p>
+</div>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-4 h-4 rounded-full bg-red-200 text-red-900 flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5 tnum">2</span>
+<div>
+<strong class="font-semibold">기술성 평가 지표 연계성 미흡:</strong>
+<p class="text-red-800 text-[12px] mt-0.5">자체 개발 핵심 소스/등록 특허와 실제 판매 중인 SaaS 제품의 직접적 기술적 종속성을 제시해야 합니다.</p>
+</div>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-4 h-4 rounded-full bg-red-200 text-red-900 flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5 tnum">3</span>
+<div>
+<strong class="font-semibold">현장 실사 인터뷰 대응 부실:</strong>
+<p class="text-red-800 text-[12px] mt-0.5">외주 개발 의심을 해소하지 못하거나, CTO/기술 책임자가 소스코드 구조 및 보안 아키텍처 답변을 못할 경우 탈락합니다.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- CARD 4: Primary CTA Action Cluster -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm space-y-3">
+<button class="h-12 w-full bg-primary-container hover:bg-primary text-white font-semibold rounded-xl shadow-md text-base transition-all flex items-center justify-center gap-2 group active:scale-[0.99]" type="button">
+<span>3주 완성 체크리스트 시작하기</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-0.5 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<a class="text-body-sm font-body-sm text-secondary hover:text-on-surface text-center block transition-colors py-1" href="#">
+            전문 행정사 1:1 서류 사전 검수 신청 →
+          </a>
+</div>
+</aside>
+</div>
+</main>
+<!-- Global Footer (Shared Component Anchor) -->
+<footer class="w-full bg-surface-container-lowest mt-16 shadow-sm border-t border-slate-100">
+<div class="max-w-7xl mx-auto px-4 md:px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<!-- Brand & Copyright -->
+<div class="flex flex-col md:flex-row items-center gap-3 text-center md:text-left">
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface">지원금 챙김이</span>
+<span class="hidden md:inline text-outline-variant">|</span>
+<p class="text-body-sm font-body-sm text-secondary">
+          © 2025 지원금 챙김이. All rights reserved.
+        </p>
+</div>
+<!-- Links -->
+<div class="flex flex-wrap items-center justify-center gap-6 text-label-sm font-label-sm">
+<a class="text-secondary hover:text-primary transition-colors duration-150" href="#">사업자 정보</a>
+<a class="text-secondary hover:text-primary transition-colors duration-150" href="#">고객센터</a>
+<a class="text-secondary hover:text-primary transition-colors duration-150" href="#">이용약관</a>
+<a class="text-secondary hover:text-primary transition-colors duration-150 font-semibold text-on-surface" href="#">개인정보처리방침</a>
+</div>
+</div>
+</footer>
+</body></html>
