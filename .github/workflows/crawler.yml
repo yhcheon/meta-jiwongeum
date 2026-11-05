@@ -1,8 +1,9 @@
-name: Crawler - M8 Real
+
+name: Real Crawler 50 - Daily 06:00 KST
 
 on:
   schedule:
-    - cron: '0 21 * * *'
+    - cron: '0 21 * * *'  # 06:00 KST
   workflow_dispatch:
 
 jobs:
@@ -10,20 +11,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
-      - name: Install deps
+          python-version: '3.11'
+
+      - name: Install Playwright
         run: |
-          pip install requests beautifulsoup4 supabase python-dotenv
-          pip install playwright
-          playwright install chromium --with-deps
-      - name: Run M8 crawler
+          pip install playwright requests beautifulsoup4
+          playwright install --with-deps chromium
+
+      - name: Run real crawler 50
         env:
-          SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
-          python scripts/crawler/bizinfo_real_crawler.py
+          cd crawler
+          python bizinfo_crawler.py
+          python upload_to_supabase.py
+
+      - name: Commit updated data
+        run: |
+          git config --global user.name "crawler-bot"
+          git config --global user.email "bot@jiwongeum.com"
+          git add data/grants_50.json || true
+          git commit -m "feat: real crawler 50 - $(date +%Y-%m-%d)" || true
+          git push || true

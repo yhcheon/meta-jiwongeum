@@ -28,7 +28,7 @@ export default function DashboardPage() {
         .from('grants')
         .select('id, title, agency, deadline, max_amount, matching_keywords')
         .order('deadline', { ascending: true })
-        .limit(20)
+        .limit(100)
 
       if (!error && data) {
         setGrants(data)
