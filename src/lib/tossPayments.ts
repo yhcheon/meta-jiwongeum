@@ -1,13 +1,28 @@
-// Toss Payments 연동 - Pro 29k
-export const PRICING = {
-  free: { price: 0, grantsLimit: 3, docsLimit: 0 },
-  pro: { price: 29000, grantsLimit: 9999, docsLimit: 5 },
-  premium: { price: 99000, grantsLimit: 9999, docsLimit: 9999 }
+// src/lib/tossPayments.ts - M9 Real Toss Payments
+// Toss Payments v2 API
+export const TOSS_CLIENT_KEY = process.env.NEXT_PUBLIC_TOSS_CLIENT_KEY || 'test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq'
+export const TOSS_SECRET_KEY = process.env.TOSS_SECRET_KEY || 'test_sk_zXLkKEypNArWmo50nX3lmeme5QKd'
+
+export const PLANS = {
+  free: { name: 'Free', price: 0, grantsLimit: 3, wordLimit: 1 },
+  pro: { name: 'Pro', price: 29000, grantsLimit: 1000, wordLimit: 100, id: 'pro_29000' },
+  premium: { name: 'Premium', price: 99000, grantsLimit: 10000, wordLimit: 1000, id: 'premium_99000' },
 }
 
-export async function requestTossPayment(customerKey: string, orderId: string) {
-  // 실제 연동: const tossPayments = TossPayments("test_ck_...")
-  // await tossPayments.requestPayment("카드", { amount: 29000, orderId, orderName: "지원금 챙김이 Pro" })
-  console.log("Toss payment request", { customerKey, orderId, amount: PRICING.pro.price })
-  return { success: true, orderId }
+export async function confirmPayment(paymentKey: string, orderId: string, amount: number) {
+  const res = await fetch('https://api.tosspayments.com/v1/payments/confirm', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Basic ${Buffer.from(TOSS_SECRET_KEY + ':').toString('base64')}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ paymentKey, orderId, amount }),
+  })
+  return res.json()
+}
+
+export function getPlanByPrice(price: number) {
+  if (price === 29000) return PLANS.pro
+  if (price === 99000) return PLANS.premium
+  return PLANS.free
 }
