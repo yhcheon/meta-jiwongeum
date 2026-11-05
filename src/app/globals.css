@@ -1,0 +1,5 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* { font-feature-settings: "tnum" 1; }
+body { font-family: Inter, Pretendard, -apple-system, sans-serif; background: #F8FAFC; margin: 0; }
