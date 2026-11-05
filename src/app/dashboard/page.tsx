@@ -4,6 +4,8 @@ import { useEffect, useState, useCallback } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import Link from 'next/link'
 
+import { AlertBadge } from '@/components/AlertBadge'
+
 const PAGE_SIZE = 20
 
 function SkeletonCard() {
@@ -83,7 +85,11 @@ export default function DashboardPage() {
         </div>
       </header>
 
+
       <div className="max-w-[1200px] mx-auto px-6 py-8">
+
+    <AlertBadge />
+
         <div className="flex gap-8">
           <div className="flex-1">
             <div className="flex justify-between items-center mb-6">

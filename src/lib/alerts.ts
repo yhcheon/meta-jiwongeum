@@ -1,45 +1,10 @@
-// src/lib/alerts.ts - M9 D-7/D-3/D-1 Email Alerts
-import { createClient } from '@/lib/supabase/server'
-
-type AlertType = 'D-7' | 'D-3' | 'D-1'
-
-export async function sendDeadlineAlerts() {
-  const supabase = await createClient()
-  
-  // 1. 마감 7일, 3일, 1일 남은 공고 찾기
-  const today = new Date()
-  const targets = [7, 3, 1]
-  
-  for (const days of targets) {
-    const targetDate = new Date()
-    targetDate.setDate(today.getDate() + days)
-    const dateStr = targetDate.toISOString().split('T')[0]
-    
-    const { data: grants } = await supabase
-      .from('grants')
-      .select('*')
-      .eq('deadline', dateStr)
-    
-    if (!grants || grants.length === 0) continue
-    
-    // 2. 해당 공고를 북마크한 유저 찾기 (matches 테이블)
-    // 여기선 모든 유저에게 발송한다고 가정 - 실제로는 matches 조인
-    console.log(`D-${days} 공고 ${grants.length}개 발견:`, grants.map(g => g.title))
-    
-    // 3. Resend로 이메일 발송 (실제 키 있을 때만)
-    // const resendApiKey = process.env.RESEND_API_KEY
-    // if (resendApiKey) { ... }
-  }
-  
-  return { success: true, message: 'Alerts checked' }
-}
-
-export function getDday(deadline: string): { type: AlertType | null, days: number } {
-  const today = new Date()
-  const d = new Date(deadline)
-  const diff = Math.ceil((d.getTime() - today.getTime()) / (1000 * 60 * 60 * 24))
-  if (diff === 7) return { type: 'D-7', days: 7 }
-  if (diff === 3) return { type: 'D-3', days: 3 }
-  if (diff === 1) return { type: 'D-1', days: 1 }
-  return { type: null, days: diff }
+// src/lib/alerts.ts - M16 D-7/D-3/D-1
+import { createClient } from '@/lib/supabase/client'
+export function getDday(d: string){return Math.ceil((new Date(d).getTime()-Date.now())/(1000*60*60*24))}
+export function shouldAlert(dday:number){return [7,3,1].includes(dday)}
+export function getAlertType(dday:number){if(dday===7)return 'D-7';if(dday===3)return 'D-3';if(dday===1)return 'D-1';return `D-${dday}`}
+export async function getExpiringGrants(){const supabase=createClient();const {data}=await supabase.from('grants').select('id, title, agency, deadline, max_amount').limit(100);if(!data)return [];return data.map((g:any)=>({...g,dday:getDday(g.deadline)})).filter((g:any)=>shouldAlert(g.dday))}
+export function generateEmailHtml(grants:any[], email:string){
+  const list=grants.map(g=>`<div style="border:1px solid #E2E8F0;border-radius:16px;padding:20px;margin-bottom:12px;background:white;"><div style="display:flex;gap:8px;margin-bottom:8px;"><span style="background:${g.dday<=3?'#FEF3C7':'#EFF6FF'};color:${g.dday<=3?'#D97706':'#2563EB'};border-radius:9999px;padding:4px 12px;font-size:12px;font-weight:700;">${getAlertType(g.dday)}</span><span style="font-size:12px;color:#64748B;">${g.agency}</span></div><div style="font-weight:700;font-size:16px;">${g.title}</div><div style="display:flex;gap:12px;font-size:13px;color:#64748B;margin-top:8px;"><span style="color:#2563EB;font-weight:600;">${g.max_amount}</span><span>•</span><span>마감 ${g.deadline}</span></div></div>`).join('')
+  return `<html><body style="font-family:sans-serif;background:#F8FAFC;padding:24px;"><div style="max-width:600px;margin:0 auto;background:white;border:1px solid #E2E8F0;border-radius:20px;padding:32px;"><h1 style="font-size:24px;font-weight:800;">마감 임박! ${grants.length}개 공고</h1><p style="color:#64748B;">${email}님, 놓치지 마세요.</p>${list}<div style="text-align:center;margin-top:24px;"><a href="https://meta-jiwongeum-yhcheon.vercel.app/dashboard" style="background:#2563EB;color:white;padding:12px 24px;border-radius:12px;text-decoration:none;font-weight:700;">대시보드 확인 →</a></div></div></body></html>`
 }

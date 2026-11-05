@@ -41,3 +41,15 @@ data/
 
 
 
+
+# Vim swap
+*.swp
+*.swo
+.env.local
+.env.local.swp
+
+# Vim swap
+*.swp
+*.swo
+.env.local
+.env.local.swp
