@@ -2,7 +2,7 @@ name: Crawler - M8 Real
 
 on:
   schedule:
-    - cron: '0 16 * * *'
+    - cron: '0 21 * * *'
   workflow_dispatch:
 
 jobs:
